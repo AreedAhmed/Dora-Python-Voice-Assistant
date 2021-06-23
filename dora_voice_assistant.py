@@ -12,13 +12,6 @@ import pyautogui
 import winshell
 import ctypes
 
-class dora:
-    name = ''
-
-    def setName(self, name):
-        self.name = name
-
-
 dora_command_list = ["Sorry, I did not get what you said", " I am Dora your assistant, how can I help you?","I did not get that", "Sorry, the service is down"]
 
 def title():
