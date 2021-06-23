@@ -45,16 +45,6 @@ def dora_listener():
 def dora_speaking(command):
     engine = pyttsx3.init()
     engine.setProperty("rate", 150)
-    # voices = engine.getProperty('voices') 
-  
-    # for voice in voices: 
-    #     # to get the info. about various voices in our PC  
-    #     print("Voice:") 
-    #     print("ID: %s" %voice.id) 
-    #     print("Name: %s" %voice.name) 
-    #     print("Age: %s" %voice.age) 
-    #     print("Gender: %s" %voice.gender) 
-    #     print("Languages Known: %s" %voice.languages) 
     voice_id = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-GB_HAZEL_11.0"
     engine.setProperty("voice", voice_id)
     print(">> Dora Reply: " + command)
@@ -184,20 +174,6 @@ def there_exists(terms, voice_data):
     for term in terms:
         if term in voice_data:
             return True
-
-# def user_name():
-#     bob_speaking(bob_command_list[4])
-#     uname = bob_listener()
-#     uname_final = uname.replace("bob", "").lower()
-#     print(uname_final)
-#     bob_speaking("Is your name, " + uname)
-#     user_confirmation = bob_listener()
-#     user_result = user_confirmation.replace("bob", "").lower()
-#     print(user_result)
-#     if there_exists(["yes", "true", "sure", "bingo", "absolutely"], user_confirmation):
-#         return uname
-#     else:
-#         user_name()
 
 if __name__ == "__main__":
     try:
